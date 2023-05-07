@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:root {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1200px;
+  min-height: calc(100vh - 70px);
+  
+  padding: 20px 30px;
+  
+  margin: 0 auto;
+  
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  
+}
+
+span.material-symbols-outlined {
+  font-size: inherit;
+}
+
+span.MuiCircularProgress-root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  margin: 0 auto;
+
+  font-size: 2em;
+}

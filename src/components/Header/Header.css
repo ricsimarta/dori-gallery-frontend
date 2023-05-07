@@ -1,0 +1,64 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  z-index: 10;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+header ul div.left-side {
+  display: flex;
+  gap: 10px;
+}
+header ul a,
+header ul button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: inherit;
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+header ul a.active,
+header ul button.active {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+header ul a.active span.text,
+header ul button.active span.text {
+  width: 80px;
+}
+header ul a:hover,
+header ul button:hover {
+  background-color: rgb(50, 50, 50);
+  color: #fff;
+}
+header ul a:hover span.text,
+header ul button:hover span.text {
+  width: 80px;
+}
+header ul a span.text,
+header ul button span.text {
+  width: 0px;
+  height: 27px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+header ul a span.material-symbols-outlined,
+header ul button span.material-symbols-outlined {
+  font-size: 24px;
+}/*# sourceMappingURL=Header.css.map */

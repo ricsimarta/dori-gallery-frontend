@@ -1,0 +1,27 @@
+div.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+div.admin div.admin-user {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+div.admin div.admin-user > div {
+  display: flex;
+  gap: 5px;
+  width: calc(100% - 80px);
+}
+div.admin div.admin-user > div h2 {
+  font-weight: 700;
+}
+div.admin div.admin-user > div:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}/*# sourceMappingURL=Admin.css.map */

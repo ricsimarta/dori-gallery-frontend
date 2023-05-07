@@ -1,0 +1,131 @@
+div.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+div.settings div.settings-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+div.settings div.settings-container h2.email {
+  padding: 10px 20px;
+  font-size: 1.3em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+div.settings div.settings-container div.settings-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+div.settings div.settings-container div.settings-main h3 {
+  font-weight: 700;
+}
+div.settings div.settings-container div.settings-main > div:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+div.settings div.settings-container div.settings-main > div:not(:last-child) span {
+  position: relative;
+  font-size: 32px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 0.3s ease;
+}
+div.settings div.settings-container div.settings-main > div:not(:last-child) span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  border-radius: 50%;
+  background-color: rgb(50, 50, 50);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+div.settings div.settings-container div.settings-main > div:not(:last-child) span.MuiCircularProgress-root {
+  position: unset;
+  width: 32px !important;
+  height: 32px !important;
+}
+div.settings div.settings-container div.settings-main > div:not(:last-child) span:hover {
+  color: #fff;
+}
+div.settings div.settings-container div.settings-main > div:not(:last-child) span:hover::after {
+  opacity: 1;
+}
+div.settings div.settings-container div.settings-main > div:not(:last-child) > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+div.settings div.settings-container div.settings-main div.name {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+div.settings div.settings-container div.settings-main div.name div.change input {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px 8px;
+}
+div.settings div.settings-container div.settings-main div.help-container {
+  position: relative;
+}
+div.settings div.settings-container div.settings-main div.help-container p.help {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  padding: 10px;
+  font-size: 0.8em;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+div.settings div.settings-container div.settings-main div.help-container span:hover ~ p.help {
+  opacity: 1;
+}
+div.settings div.settings-container div.settings-main div.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+div.settings div.settings-container div.settings-main div.buttons button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+div.settings div.settings-container div.settings-main div.buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+div.settings div.settings-container div.settings-main div.buttons button.delete {
+  color: rgb(150, 0, 0);
+  border: 2px solid rgb(220, 0, 0);
+}
+div.settings div.settings-container div.settings-main div.buttons button.delete:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+div.settings div.settings-container div.settings-main div.buttons button span {
+  font-size: 24px;
+}/*# sourceMappingURL=Settings.css.map */

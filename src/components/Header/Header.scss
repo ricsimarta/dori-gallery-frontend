@@ -1,0 +1,82 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  
+  padding: 10px;
+
+  font-size: 1.2em;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+  background-color: #fff;
+
+  z-index: 10;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 10px;
+
+    div.left-side {
+      display: flex;
+      gap: 10px;
+    }
+
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+
+      height: 40px;
+
+      padding: 5px 10px;
+
+      border: 1px solid #fff;
+      background-color: transparent;
+
+      color: inherit;
+      text-align: start;
+      text-decoration: none;
+
+      cursor: pointer;
+
+      transition: all 0.3s ease;
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+
+        span.text {
+          width: 80px;
+        }
+      }
+
+      &:hover {
+        background-color: rgb(50, 50, 50);
+        color: #fff;
+
+        span.text {
+          width: 80px;
+        }
+      }
+      
+      span.text {
+        width: 0px;
+        height: 27px;
+        
+        overflow: hidden;
+
+        transition: width 0.3s ease;
+      }
+
+      span.material-symbols-outlined {
+        font-size: 24px;
+      }
+    }
+  }
+}
