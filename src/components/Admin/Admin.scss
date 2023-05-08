@@ -1,37 +1,149 @@
 div.admin {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  h1 {
+    text-align: center;
+  }
 
-  gap: 20px;
+  div.users-list-settings {
+    display: flex;
+  }
 
-  padding: 20px;
-
-  div.admin-user {
+  div.users-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
 
-    width: 100%;
+    gap: 20px;
 
-    padding: 10px;
+    padding: 20px;
 
     border: 1px solid rgba(0, 0, 0, 0.3);
 
-    &>div {
+    div.listing-container {
       display: flex;
-      gap: 5px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
 
-      width: calc(100% - 80px);
+      width: 100%;
 
-      h2 {
-        font-weight: 700;
+      h3.listing {
+        font-style: italic;
+
+        span.number {
+          font-weight: 700;
+
+          &.admin {
+            color: rgb(180, 0, 0);
+          }
+
+          &.mod {
+            color: rgb(0, 120, 0);
+          }
+
+          &.member {
+            color: rgb(0, 0, 180);
+          }
+        }
       }
 
-      &:not(:last-child) {
-        padding-bottom: 10px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      div.input-container {
+        position: relative;
 
+        input {
+          width: 250px;
+
+          padding: 8px 30px 8px 10px;
+
+          border: 1px solid rgba(0, 0, 0, 0.3);
+
+          overflow: hidden;
+
+          animation: slide-in 0.3s ease;
+        }
+
+        @keyframes slide-in {
+          0% {
+            width: 1px;
+          }
+
+          100% {
+            width: 250px;
+          }
+        }
+
+        span {
+          position: absolute;
+          top: 50%;
+          right: 8px;
+
+          font-size: 20px;
+
+          transform: translateY(-50%);
+
+          cursor: pointer;
+
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #fff;
+            background-color: rgb(50, 50, 50);
+          }
+        }
+      }
+
+      button.search-icon {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+
+        height: 40px;
+
+        padding: 5px 10px;
+
+        border: 1px solid #fff;
+        background-color: transparent;
+
+        color: inherit;
+        text-align: start;
+        text-decoration: none;
+
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+
+        &.active {
+          border: 1px solid rgba(0, 0, 0, 0.3);
+
+          span.text {
+            width: 80px;
+          }
+        }
+
+        &:hover {
+          background-color: rgb(50, 50, 50);
+          color: #fff;
+
+          span.text {
+            width: 80px;
+          }
+        }
+
+        span.text {
+          display: flex;
+          align-items: center;
+
+          width: 0px;
+          height: 27px;
+
+          overflow: hidden;
+
+          transition: width 0.3s ease;
+        }
+
+        span.material-symbols-outlined {
+          font-size: 24px;
+        }
       }
     }
   }

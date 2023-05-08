@@ -1,0 +1,33 @@
+div.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+div.login div.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+div.login div.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+}
+div.login div.form-container form input {
+  width: 300px;
+}
+div.login div.form-container form input.wrong {
+  border: 1px solid rgba(255, 0, 0, 0.8);
+}
+div.login div.form-container form div.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}/*# sourceMappingURL=Login.css.map */

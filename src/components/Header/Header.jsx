@@ -11,30 +11,47 @@ const Header = () => {
   const { currentUser, userRole } = useContext(AuthContext)
   const { language } = useContext(LangContext)
 
-  if (currentUser) return (
+  return (
     <header>
       <ul>
-        <div className='left-side'>
-          <NavLink to='/'>
-            <span className="material-symbols-outlined">home</span>
-            <span className='text'>{languages[language].header.home}</span>
-          </NavLink>
+        {currentUser ?
+          <>
+            <div className='left-side'>
+              <NavLink to='/'>
+                <span className="material-symbols-outlined">home</span>
+                <span className='text'>{languages[language].header.home}</span>
+              </NavLink>
 
-          <NavLink to='/settings'>
-            <span className="material-symbols-outlined">settings</span>
-            <span className='text'>{languages[language].header.settings}</span>
-          </NavLink>
+              <NavLink to='/settings'>
+                <span className="material-symbols-outlined">settings</span>
+                <span className='text'>{languages[language].header.settings}</span>
+              </NavLink>
 
-          {userRole === 'admin' && <NavLink to='/admin'>
-            <span className="material-symbols-outlined">manage_accounts</span>
-            <span className='text'>{languages[language].header.admin}</span>
-          </NavLink>}
-        </div>
+              {userRole === 'admin' && <NavLink to='/admin'>
+                <span className="material-symbols-outlined">manage_accounts</span>
+                <span className='text'>{languages[language].header.admin}</span>
+              </NavLink>}
+            </div>
 
-        <button onClick={() => firebaseConfig.auth().signOut()}>
-          <span className="material-symbols-outlined">logout</span>
-          <span className='text'>{languages[language].header.logout}</span>
-        </button>
+            <button onClick={() => firebaseConfig.auth().signOut()}>
+              <span className="material-symbols-outlined">logout</span>
+              <span className='text'>{languages[language].header.logout}</span>
+            </button>
+          </>
+          :
+          <div className='left-side'>
+            <NavLink to='/login'>
+              <span className="material-symbols-outlined">login</span>
+              <span className='text'>Login</span>
+            </NavLink>
+
+            <NavLink to='/signup'>
+              <span className="material-symbols-outlined">person_add</span>
+              <span className='text'>Sign up</span>
+            </NavLink>
+          </div>
+        }
+
       </ul>
     </header>
   )

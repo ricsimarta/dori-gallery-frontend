@@ -1,27 +1,106 @@
-div.admin {
+div.admin h1 {
+  text-align: center;
+}
+div.admin div.users-list-settings {
+  display: flex;
+}
+div.admin div.users-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 20px;
-}
-div.admin div.admin-user {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
-div.admin div.admin-user > div {
+div.admin div.users-container div.listing-container {
   display: flex;
-  gap: 5px;
-  width: calc(100% - 80px);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
 }
-div.admin div.admin-user > div h2 {
+div.admin div.users-container div.listing-container h3.listing {
+  font-style: italic;
+}
+div.admin div.users-container div.listing-container h3.listing span.number {
   font-weight: 700;
 }
-div.admin div.admin-user > div:not(:last-child) {
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+div.admin div.users-container div.listing-container h3.listing span.number.admin {
+  color: rgb(180, 0, 0);
+}
+div.admin div.users-container div.listing-container h3.listing span.number.mod {
+  color: rgb(0, 120, 0);
+}
+div.admin div.users-container div.listing-container h3.listing span.number.member {
+  color: rgb(0, 0, 180);
+}
+div.admin div.users-container div.listing-container div.input-container {
+  position: relative;
+}
+div.admin div.users-container div.listing-container div.input-container input {
+  width: 250px;
+  padding: 8px 30px 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slide-in 0.3s ease;
+}
+@keyframes slide-in {
+  0% {
+    width: 1px;
+  }
+  100% {
+    width: 250px;
+  }
+}
+div.admin div.users-container div.listing-container div.input-container span {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  font-size: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+div.admin div.users-container div.listing-container div.input-container span:hover {
+  color: #fff;
+  background-color: rgb(50, 50, 50);
+}
+div.admin div.users-container div.listing-container button.search-icon {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: inherit;
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+div.admin div.users-container div.listing-container button.search-icon.active {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+div.admin div.users-container div.listing-container button.search-icon.active span.text {
+  width: 80px;
+}
+div.admin div.users-container div.listing-container button.search-icon:hover {
+  background-color: rgb(50, 50, 50);
+  color: #fff;
+}
+div.admin div.users-container div.listing-container button.search-icon:hover span.text {
+  width: 80px;
+}
+div.admin div.users-container div.listing-container button.search-icon span.text {
+  display: flex;
+  align-items: center;
+  width: 0px;
+  height: 27px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+div.admin div.users-container div.listing-container button.search-icon span.material-symbols-outlined {
+  font-size: 24px;
 }/*# sourceMappingURL=Admin.css.map */

@@ -28,7 +28,7 @@ const Singup = () => {
       .catch(err => console.log(err))
   }
   
-  if (currentUser) return <Navigate replace to='/settings' />
+  if (currentUser) return <Navigate replace to='/' />
 
   return (
     <Layout>

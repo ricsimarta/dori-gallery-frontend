@@ -1,32 +1,38 @@
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
+.admin-user {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   width: 100%;
-  
+
   padding: 10px;
 
-  font-size: 1.2em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-
-  background-color: #fff;
-
-  z-index: 10;
-
-  ul {
+  &>div {
     display: flex;
-    justify-content: space-between;
+    gap: 5px;
 
-    padding-right: 10px;
-
-    div.left-side {
-      display: flex;
-      gap: 10px;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
     }
 
-    a,
+    h2 {
+      font-weight: 700;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    }
+  }
+
+  div.action-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
     button {
       display: flex;
       align-items: center;
@@ -61,18 +67,16 @@ header {
 
         span.text {
           width: 80px;
-          
         }
       }
-      
+
       span.text {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
 
         width: 0px;
         height: 27px;
-      
+
         overflow: hidden;
 
         transition: width 0.3s ease;

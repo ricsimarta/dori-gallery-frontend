@@ -1,0 +1,67 @@
+.admin-user {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.admin-user > div {
+  display: flex;
+  gap: 5px;
+}
+@media screen and (max-width: 600px) {
+  .admin-user > div {
+    flex-direction: column;
+  }
+}
+.admin-user > div h2 {
+  font-weight: 700;
+}
+.admin-user > div:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.admin-user div.action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.admin-user div.action-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: inherit;
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.admin-user div.action-buttons button.active {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.admin-user div.action-buttons button.active span.text {
+  width: 80px;
+}
+.admin-user div.action-buttons button:hover {
+  background-color: rgb(50, 50, 50);
+  color: #fff;
+}
+.admin-user div.action-buttons button:hover span.text {
+  width: 80px;
+}
+.admin-user div.action-buttons button span.text {
+  display: flex;
+  align-items: center;
+  width: 0px;
+  height: 27px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+.admin-user div.action-buttons button span.material-symbols-outlined {
+  font-size: 24px;
+}/*# sourceMappingURL=User.css.map */

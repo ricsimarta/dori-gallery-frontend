@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
 
+import './User.css'
+
 const User = ({user}) => {
 
   const makeDate = (firebaseDate) => {
-    const dateElements = firebaseDate.split(',')[1].split(' ')
-    const timeElements = dateElements[4].split(':')
-
     //['', '17', 'Apr', '2023', '22:43:16', 'GMT'] (3) ['22', '43', '16']
     //new Date(year,month,day,hours,minutes,seconds,ms)
     return new Date(firebaseDate).toLocaleString()
@@ -36,6 +35,18 @@ const User = ({user}) => {
       <div className='last-login-date'>
         <h2>Last login:</h2>
         <h3>{makeDate(user.lastSignInTime)}</h3>
+      </div>
+
+      <div className='action-buttons'>
+        <button className='ban'>
+          <span className="material-symbols-outlined">block</span>
+          <span className='text'>Ban</span>
+        </button>
+
+        <button className='delete'>
+          <span className="material-symbols-outlined">delete</span>
+          <span className='text'>Delete</span>
+        </button>
       </div>
     </div>
   )

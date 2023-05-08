@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Navigate } from 'react-router-dom'
 import firebaseConfig from '../firebase-config'
 import { CircularProgress } from '@mui/material'
 
@@ -10,8 +11,10 @@ const AuthProvider = ({ children }) => {
   const [userRole, setUserRole] = useState(null)
 
   useEffect(() => {
+    console.log(currentUser)
     firebaseConfig.auth().onAuthStateChanged(user => {
       setCurrentUser(user)
+      setLoading(false)
     })
   }, [])
   
@@ -27,7 +30,7 @@ const AuthProvider = ({ children }) => {
           console.log(err)
           setLoading(false)
         })
-    }
+    } 
   }, [currentUser])
 
   if (loading) {

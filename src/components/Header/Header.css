@@ -35,7 +35,6 @@ header ul button {
 }
 header ul a.active,
 header ul button.active {
-  background-color: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 header ul a.active span.text,
@@ -53,6 +52,9 @@ header ul button:hover span.text {
 }
 header ul a span.text,
 header ul button span.text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   width: 0px;
   height: 27px;
   overflow: hidden;

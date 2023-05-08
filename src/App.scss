@@ -1,16 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
+
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
 }
 
 :root {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   overflow: overlay;
 }
 
@@ -20,13 +23,18 @@
 
 main {
   position: relative;
+
   max-width: 1200px;
   min-height: calc(100vh - 70px);
+
   padding: 20px 30px;
+
   margin: 0 auto;
+
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.3);
+
 }
 
 span.material-symbols-outlined {
@@ -37,23 +45,22 @@ span.MuiCircularProgress-root {
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
 }
 
 h1 {
   margin: 0 auto;
+
   font-size: 2em;
 }
 
 input {
   width: 250px;
-  padding: 8px 30px 8px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-}
 
-input::-moz-placeholder {
-  font-style: italic;
-  opacity: 0.5;
+  padding: 8px 30px 8px 10px;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 input::placeholder {
@@ -66,44 +73,53 @@ button {
   display: flex;
   align-items: center;
   gap: 3px;
+
   height: 40px;
+
   padding: 5px 10px;
+
   border: 1px solid #fff;
   background-color: transparent;
+
   color: inherit;
   text-align: start;
   text-decoration: none;
+
   cursor: pointer;
+
   transition: all 0.3s ease;
+
+  &.active {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    span.text {
+      width: 80px;
+    }
+  }
+
+  &:hover {
+    background-color: rgb(50, 50, 50);
+    color: #fff;
+
+    span.text {
+      width: 80px;
+    }
+  }
+
+  span.text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 0px;
+    height: 27px;
+
+    overflow: hidden;
+
+    transition: width 0.3s ease;
+  }
+
+  span.material-symbols-outlined {
+    font-size: 24px;
+  }
 }
-a.active,
-button.active {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-}
-a.active span.text,
-button.active span.text {
-  width: 80px;
-}
-a:hover,
-button:hover {
-  background-color: rgb(50, 50, 50);
-  color: #fff;
-}
-a:hover span.text,
-button:hover span.text {
-  width: 80px;
-}
-a span.text,
-button span.text {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 0px;
-  height: 27px;
-  overflow: hidden;
-  transition: width 0.3s ease;
-}
-a span.material-symbols-outlined,
-button span.material-symbols-outlined {
-  font-size: 24px;
-}/*# sourceMappingURL=App.css.map */
