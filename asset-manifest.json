@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dori-gallery-frontend/static/css/main.e68b89de.css",
-    "main.js": "/dori-gallery-frontend/static/js/main.235c39a0.js",
+    "main.js": "/dori-gallery-frontend/static/js/main.d702b2bb.js",
     "static/js/787.55abc558.chunk.js": "/dori-gallery-frontend/static/js/787.55abc558.chunk.js",
     "index.html": "/dori-gallery-frontend/index.html",
     "main.e68b89de.css.map": "/dori-gallery-frontend/static/css/main.e68b89de.css.map",
-    "main.235c39a0.js.map": "/dori-gallery-frontend/static/js/main.235c39a0.js.map",
+    "main.d702b2bb.js.map": "/dori-gallery-frontend/static/js/main.d702b2bb.js.map",
     "787.55abc558.chunk.js.map": "/dori-gallery-frontend/static/js/787.55abc558.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e68b89de.css",
-    "static/js/main.235c39a0.js"
+    "static/js/main.d702b2bb.js"
   ]
 }
