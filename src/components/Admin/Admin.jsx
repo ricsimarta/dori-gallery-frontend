@@ -67,15 +67,15 @@ const Admin = () => {
   return (
     <Layout>
       <div className='admin'>
-        <h1>ADmin</h1>
+        <h1>Admin</h1>
 
         {users.length === 0 ?
           <>
             <CircularProgress color='inherit' />
           </> :
           <>
-            <div className='users-list-settings'>
-            </div>
+            {/* <div className='users-list-settings'>
+            </div> */}
 
             <div className='users-container'>
               <div className='listing-container'>

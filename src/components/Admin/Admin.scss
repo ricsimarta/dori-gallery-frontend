@@ -1,4 +1,10 @@
 div.admin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  color: #dea570;
+
   h1 {
     text-align: center;
   }

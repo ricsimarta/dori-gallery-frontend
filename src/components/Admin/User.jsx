@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
+
+import { MessageContext } from '../Message'
 
 import './User.css'
 
 const User = ({user}) => {
+  const { setMessage } = useContext(MessageContext)
 
   const makeDate = (firebaseDate) => {
     //['', '17', 'Apr', '2023', '22:43:16', 'GMT'] (3) ['22', '43', '16']
@@ -38,7 +41,13 @@ const User = ({user}) => {
       </div>
 
       <div className='action-buttons'>
-        <button className='ban'>
+        <button className='ban' onClick={() => {
+          console.log('click')
+          setMessage({
+            type: 'success',
+            text: `User ${user.email} is now banned. `
+          })
+        }}>
           <span className="material-symbols-outlined">block</span>
           <span className='text'>Ban</span>
         </button>

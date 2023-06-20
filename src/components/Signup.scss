@@ -1,0 +1,22 @@
+div.signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  padding: 20px;
+
+  div.form-container {
+    form {
+      div.buttons {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

@@ -87,6 +87,7 @@ button.active span.text {
 a:hover,
 button:hover {
   background-color: rgb(50, 50, 50);
+  border: 1px solid rgb(50, 50, 50);
   color: #fff;
 }
 a:hover span.text,
@@ -106,4 +107,27 @@ button span.text {
 a span.material-symbols-outlined,
 button span.material-symbols-outlined {
   font-size: 24px;
+}
+
+div.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+div.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+}
+div.form-container form input {
+  width: 300px;
+}
+div.form-container form input.wrong {
+  border: 1px solid rgba(255, 0, 0, 0.8);
+}
+div.form-container form div.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }/*# sourceMappingURL=App.css.map */

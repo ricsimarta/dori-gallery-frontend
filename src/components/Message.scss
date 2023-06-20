@@ -1,0 +1,40 @@
+div.message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  max-width: 100%;
+  max-width: 500px;
+
+  padding: 10px 20px;
+
+  border: 1px solid rgba(0, 0, 0, 0.5);
+
+  font-weight: 500;
+
+  background-color: #fff;
+  z-index: 20;
+
+  animation: slide-in 0.3s ease;
+  transition: all 0.3s ease;
+
+  @keyframes slide-in {
+    0% {
+      top: -400px
+    }
+
+    100% {
+      top: 20px;
+    }
+  }
+
+  &.fading {
+    top: -500px;
+  }
+
+  &.success {
+    border: 2px solid rgb(0, 120, 0);
+    background-color: rgb(188, 218, 188);
+  }
+}

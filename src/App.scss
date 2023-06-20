@@ -80,7 +80,7 @@ button {
 
   border: 1px solid #fff;
   background-color: transparent;
-
+  
   color: inherit;
   text-align: start;
   text-decoration: none;
@@ -88,7 +88,7 @@ button {
   cursor: pointer;
 
   transition: all 0.3s ease;
-
+  
   &.active {
     border: 1px solid rgba(0, 0, 0, 0.3);
 
@@ -99,6 +99,7 @@ button {
 
   &:hover {
     background-color: rgb(50, 50, 50);
+    border: 1px solid rgb(50, 50, 50);
     color: #fff;
 
     span.text {
@@ -121,5 +122,32 @@ button {
 
   span.material-symbols-outlined {
     font-size: 24px;
+  }
+}
+
+div.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+
+    input {
+      width: 300px;
+
+      &.wrong {
+        border: 1px solid rgba(255, 0, 0, 0.8);
+      }
+    }
+
+    div.buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }

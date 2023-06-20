@@ -87,7 +87,8 @@ const Login = () => {
                   <span className='text'>Forgotten</span>
                 </button>
               </div>
-            </form> :
+            </form> 
+            :
             <form onSubmit={handleReset}>
               <input className={wrongEmail ? 'wrong' : null} type='email' placeholder='email' value={resetEmail} onChange={e => setResetEmail(e.target.value)} />
               <input className={wrongEmail ? 'wrong' : null} type='email' placeholder='email again' value={resetEmail2} onChange={e => setResetEmail2(e.target.value)} />

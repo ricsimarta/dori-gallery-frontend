@@ -61,7 +61,7 @@ const Settings = () => {
 
   const updateProfile = user => {
     setUpdateLoading(true)
-    fetch('/users/update-user', { 
+    fetch('https://dori-gallery-backend.onrender.com/users/update-user', { 
       method: 'POST',
       headers: { 
         'Authorization': user.uid,

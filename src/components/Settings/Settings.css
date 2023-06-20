@@ -112,19 +112,21 @@ div.settings div.settings-container div.settings-main div.buttons button {
   gap: 5px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   background-color: transparent;
-  padding: 5px 8px;
+  padding: 5px 10px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 div.settings div.settings-container div.settings-main div.buttons button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(50, 50, 50);
 }
 div.settings div.settings-container div.settings-main div.buttons button.delete {
-  color: rgb(150, 0, 0);
   border: 2px solid rgb(220, 0, 0);
+  color: rgb(150, 0, 0);
 }
 div.settings div.settings-container div.settings-main div.buttons button.delete:hover {
-  background-color: rgba(255, 0, 0, 0.1);
+  border: 2px solid rgb(150, 0, 0);
+  color: #fff;
+  background-color: rgb(150, 0, 0);
 }
 div.settings div.settings-container div.settings-main div.buttons button span {
   font-size: 24px;
