@@ -8,6 +8,7 @@ Backend for this project: https://github.com/ricsimarta/dori-gallery-backend
 ## Used technologies: ##
  - React (bootstrapped with create-react-app)
  - React-router
+ - React context
  - SCSS
  - Firebase
  - MUI
